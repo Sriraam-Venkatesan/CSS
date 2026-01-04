@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Google</title>
+    <link rel="icon" href="Icon.webp">
+</head>
+<style>
+    @font-face {
+        font-family: "font-google";
+        src: url("font.ttf");
+    }
+    body{
+         
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 1fr 3fr;
+    }
+    #profilephoto{
+        height: 25px;
+        width: 25px;
+        opacity: 75%;
+        margin-top: 10px;
+        cursor: pointer;
+        }
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1160px;
+        font-family: font-google;
+        font-size: 15px;
+        color: black;
+        
+        }
+        #left{
+            flex-wrap: wrap;
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        #right{
+            flex-wrap: wrap;
+            display: flex;
+            gap: 20px;
+            flex-direction: row;   
+            margin-right: 10px;
+        }
+        #gmail{
+            margin-top: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        #gmail:hover{
+            text-decoration:underline;
+            color: navy;
+        }
+       #images{
+            margin-top: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        #images:hover{
+            text-decoration:underline;
+            color: navy;
+        }
+        #hovercircle2{
+            flex-wrap: wrap;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        #hovercircle2:hover{
+            background-color: #a0a0a0b9;
+        }
+         #apps{
+            margin-top: 10px;
+            padding-bottom: 15px;
+            opacity: 75%;
+        }
+         #hovercircle{
+            flex-wrap: wrap;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        #hovercircle:hover{
+            background-color:#a0a0a0b9;
+        }
+         #searchlab{
+            margin-top: 10px;
+            padding-bottom: 15px;
+            opacity: 75%;
+        }
+        #about{
+            text-decoration: none;
+            color: black;
+        }
+        #about:hover{
+            text-decoration:underline;
+            color: navy;
+        }
+         #about{
+            text-decoration: none;
+            color: black;
+        }
+        #about:hover{
+            text-decoration:underline;
+            color: navy;
+        }
+         #store{
+            text-decoration: none;
+            color: black;
+        }
+        #store:hover{
+            text-decoration:underline;
+            color: navy;
+        }
+        #google{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            }
+        #logo{
+            height: 101.5px;
+            width: 300px;
+            cursor: pointer;;
+        }
+        #search{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        #box{
+            height: 50px;
+            width: 650px;
+            background-color: #ffffff;
+            border-radius: 100px;
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.104);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        #plus{
+            opacity: 60%;
+        }
+        #hovercircle3{
+            margin-top: 6px;
+            margin-left: 6px;
+            flex-wrap: wrap;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease; 
+        }
+        #hovercircle3:hover{
+            background-color:#a0a0a0b9;
+        }
+        input{
+            display: inline;
+           margin-top: 7px;
+           margin-bottom: 7px;
+           border: none;
+           outline: none;
+           font-size: 17px;
+           font-weight: 500;
+           width: 400px;
+        }
+       #hovermic{
+         margin-top: 6px;
+            margin-left: 6px;
+           flex-wrap: wrap;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease; 
+       }
+        #hovermic:hover{
+            background-color:#a0a0a0b9;
+        }
+        #mic{
+            opacity: 60%;
+        }
+        #hovercamera{
+         margin-top: 6px;
+            margin-left: 6px;
+           flex-wrap: wrap;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease; 
+       }
+        #hovercamera:hover{
+            background-color:#a0a0a0b9;
+        }
+        #camera{
+            opacity: 60%;
+        }
+        #outergradient{
+           cursor: pointer;
+            height:40px;
+            width:98px;
+            margin-top: 6px;
+            border-radius: 50px;
+            }
+            #outergradient:hover{
+                 background: linear-gradient(to right, blue,red,yellow,green);
+            }
+        #magnify{
+            margin-top: 10px; 
+            margin-left: 5px;
+            opacity: 60%;
+            cursor: pointer;
+        }
+        h4{
+            font-family:font-google ;
+            display: inline;
+            margin-top: 8px;
+            margin-left: 2px;
+            opacity: 60%;
+            cursor: pointer;
+        }
+        #innerbutton{
+             display: flex;
+             height:35px;
+             width:93px;
+            border: rgba(0, 0, 0, 0.104) 2px solid;
+            border-radius: 50px;
+            background-color: #fff;
+            cursor: pointer;
+            
+        } 
+        #buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+        #googlesearch{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            height: 30px;
+            width: 130px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.104);
+        }
+        #google-search{
+            margin: 0;
+           }
+           #googlesearch:hover{
+            
+            border: 1px solid rgba(0, 0, 0, 0.104);
+           }
+         #doodle{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            height: 30px;
+            width: 130px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.104);
+        }
+        #lucky{
+            margin: 0;
+           }
+           #doodle:hover{
+            
+            border: 1px solid rgba(0, 0, 0, 0.323);
+           }
+           p{
+            display: inline;
+            font-family: font-google ;
+            color: rgb(0, 0, 0);
+           }
+           #languages{
+            text-align: center;
+            font-size: 13px;
+           }
+</style>
+<body>
+    
+        <div id="navbar">
+            <div id="left">
+                <a href="" id="about">About</a>
+                <a href="" id="store">Store</a>
+            </div>
+            <div id="right">
+                <a href="" id="gmail">Gmail</a>
+                <a href="" id="images">Images</a>
+                <div id="hovercircle">
+                <i class="fa-solid fa-flask" id="searchlab"></i>
+            </div>
+            <div id="hovercircle2">
+                <i class="fa-solid fa-grip" id="apps"></i>
+                </div>
+                <img src="Profile Photo.png" alt="" id="profilephoto">
+            </div>
+        </div>
+        <div id="google">
+            <img src="Logo.webp" alt="" id="logo">
+        </div>
+        <div id="search">
+            <div id="box">
+                <div id="hovercircle3">
+                <i class="fa-solid fa-plus" id="plus"></i>
+                </div>
+                <input type="text">
+                <div id="hovermic">
+                    <i class="fa-solid fa-microphone" id="mic"></i>
+                </div>
+                <div id="hovercamera">
+                    <i class="fa-regular fa-camera" id="camera"></i>
+                </div>
+                <div id="outergradient"><div id="innerbutton"><i class="fa-solid fa-magnifying-glass" id="magnify"></i>
+                <h4>AI Mode</h4></div></div>
+             </div>
+        </div>
+        <div id="buttons">
+            <div id="googlesearch"><h4 id="google-search">Google Search</h4></div>
+            <div id="doodle"><h4 id="lucky">I'm feeling Lucky</h4></div>
+        </div>
+        </div>
+        <div id="languages">
+            <p>Google offered in:</p>
+            <a href="">தமிழ்</a>
+            <a href="">മലയാളം</a>
+            <a href="">తెలుగు</a>
+            <a href="">ಕನ್ನಡ</a>
+            <a href="">हिंदी</a>
+            <a href="">मराठी</a>
+            <a href="">भोजपुरी</a>
+            <a href="">ગુજરાતી</a>
+            <a href="">ଓଡିଆ</a>
+            <a href="">ತುಳು</a>
+        </div>
+    
+</body>
+</html>
